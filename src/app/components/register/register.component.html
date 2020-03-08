@@ -19,7 +19,10 @@
           <br />
           <input type="text" name="email" [(ngModel)]="email" /><br /><br />
         </section>
-        <div class="error-report" *ngIf="showErrors && !valid">
+        <div class="alert alert-danger" *ngIf="failed">
+          <p>Failed to register. This email may already have an account.</p>
+        </div>
+        <div class="alert alert-warning" *ngIf="showErrors && !valid">
           <p>Please correct the following errors:</p>
           <ul>
             <li *ngFor="let error of errors">

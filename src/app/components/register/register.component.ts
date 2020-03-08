@@ -13,6 +13,7 @@ export class RegisterComponent {
   public password: string = null;
 
   public showErrors = false;
+  public failed = false;
 
   public get errors(): string[] {
     const myErrors = [];
@@ -44,12 +45,13 @@ export class RegisterComponent {
 
   private register() {
     let response;
+    this.failed = false;
     this.userService.register(this.email)
       .subscribe((res) => response = res,
         (error) => {
-          console.log("register failed");
+          this.failed = true;
         }, () => {
-          this.navHelper.goToDashboard();
+          this.navHelper.goToLogin();
         });
   }
 
