@@ -2,7 +2,6 @@ import { Component } from "@angular/core";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { AuthService } from "src/app/services/auth.service";
 import { NavHelperService } from "src/app/services/nav-helper.service";
-import { UserService } from "src/app/services/user.service";
 
 @Component({
   selector: "app-login",
@@ -41,7 +40,6 @@ export class LoginComponent {
 
   constructor(
     private authService: AuthService,
-    private userService: UserService,
     private navHelper: NavHelperService,
   ) { }
 
@@ -53,21 +51,7 @@ export class LoginComponent {
   }
 
   public resetPassword() {
-    const emailToReset = prompt("What email do you want to reset the password for?");
-    if (emailToReset) {
-      this.performReset(emailToReset);
-    }
-  }
-
-  private performReset(emailToReset: string) {
-    let response;
-    this.userService.resetPasswordAutomatic(emailToReset)
-      .subscribe((res) => response = res,
-        (error) => {
-          console.log("reset failed");
-        }, () => {
-          console.log("reset success");
-        });
+    this.navHelper.goToForgot();
   }
 
   private login() {

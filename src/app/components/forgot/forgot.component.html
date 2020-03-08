@@ -1,1 +1,41 @@
-<p>forgot works!</p>
+<div class="jumbotron jumbotron-fluid py-4 mb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>
+          Forgot Password
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-3">
+      <form>
+        <section id="email">
+          Email:
+          <br />
+          <input type="text" name="email" [(ngModel)]="email" /><br /><br />
+        </section>
+        <div class="alert alert-danger" *ngIf="resetFailure">
+          <p>
+            Failed to reset. Is there an account associated with this email?
+          </p>
+        </div>
+        <div class="alert alert-warning" *ngIf="showErrors && !valid">
+          <p>Please correct the following errors:</p>
+          <ul>
+            <li *ngFor="let error of errors">
+              {{ error }}
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-primary" (click)="submit()">
+          Reset password
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
