@@ -35,6 +35,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Register);
   }
 
+  public goToForgot(): void {
+    this.goToRoute(ROUTES_ENUM.Forgot);
+  }
+
   private goToRoute(route: string): void {
     this.goToRoutes([route]);
   }

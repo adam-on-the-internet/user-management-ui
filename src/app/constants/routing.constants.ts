@@ -5,4 +5,5 @@ export const enum ROUTES_ENUM {
   Admin = "admin",
   Login = "login",
   Register = "register",
+  Forgot = "forgot",
 }
