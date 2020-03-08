@@ -35,54 +35,6 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Register);
   }
 
-  public goToContraptionOverview(): void {
-    this.goToRoute(ROUTES_ENUM.ContraptionOverview);
-  }
-
-  public goToContraptionDetails(contraptionId: string): void {
-    this.goToRoutes([ROUTES_ENUM.ContraptionDetails, contraptionId]);
-  }
-
-  public goToContraptionCreateForm(): void {
-    this.goToRoute(ROUTES_ENUM.ContraptionForm);
-  }
-
-  public goToContraptionEditForm(contraptionId: string): void {
-    this.goToRoutes([ROUTES_ENUM.ContraptionForm, contraptionId]);
-  }
-
-  public goToWidgetOverview(): void {
-    this.goToRoute(ROUTES_ENUM.WidgetOverview);
-  }
-
-  public goToWidgetDetails(widgetId: string): void {
-    this.goToRoutes([ROUTES_ENUM.WidgetDetails, widgetId]);
-  }
-
-  public goToWidgetCreateForm(): void {
-    this.goToRoute(ROUTES_ENUM.WidgetForm);
-  }
-
-  public goToWidgetEditForm(widgetId: string): void {
-    this.goToRoutes([ROUTES_ENUM.WidgetForm, widgetId]);
-  }
-
-  public goToDoodadOverview(): void {
-    this.goToRoute(ROUTES_ENUM.DoodadOverview);
-  }
-
-  public goToDoodadDetails(doodadId: string): void {
-    this.goToRoutes([ROUTES_ENUM.DoodadDetails, doodadId]);
-  }
-
-  public goToDoodadCreateForm(): void {
-    this.goToRoute(ROUTES_ENUM.DoodadForm);
-  }
-
-  public goToDoodadEditForm(doodadId: string): void {
-    this.goToRoutes([ROUTES_ENUM.DoodadForm, doodadId]);
-  }
-
   private goToRoute(route: string): void {
     this.goToRoutes([route]);
   }

@@ -53,18 +53,6 @@ export class NavbarComponent {
     this.navHelper.goToRegister();
   }
 
-  public goToContraptionOverview(): void {
-    this.navHelper.goToContraptionOverview();
-  }
-
-  public goToWidgetOverview(): void {
-    this.navHelper.goToWidgetOverview();
-  }
-
-  public goToDoodadOverview(): void {
-    this.navHelper.goToDoodadOverview();
-  }
-
   public logout(): void {
     CookieHelper.removeToken();
     this.navHelper.goToLogin();
