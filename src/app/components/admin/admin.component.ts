@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "src/app/services/user.service";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { User } from "src/app/models/User.model";
-import { ServiceUrl } from 'src/app/constants/rest.constants';
+import { ServiceUrl } from "src/app/constants/rest.constants";
 
 @Component({
   selector: "app-admin",
