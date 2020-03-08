@@ -30,7 +30,7 @@
               <td>{{ user.email }}</td>
               <td>{{ user.admin }}</td>
               <td>
-                <button (click)="toggleAdmin(user)">
+                <button class="btn btn-secondary" (click)="toggleAdmin(user)">
                   <span *ngIf="user.admin">
                     Remove admin rights
                   </span>
@@ -41,10 +41,15 @@
               </td>
               <td>{{ user.specialAccess }}</td>
               <td>
-                <button (click)="setSpecialAccess(user)">Edit access</button>
+                <button
+                  class="btn btn-secondary"
+                  (click)="setSpecialAccess(user)"
+                >
+                  Edit access
+                </button>
               </td>
               <td>
-                <button (click)="deleteUser(user)">
+                <button class="btn btn-secondary" (click)="deleteUser(user)">
                   Delete
                 </button>
               </td>
