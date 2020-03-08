@@ -17,14 +17,6 @@ export class NavbarComponent {
     return CookieHelper.getUserDetails().admin;
   }
 
-  public get userEmail(): string {
-    if (this.isLoggedIn) {
-      return CookieHelper.getUserDetails().email;
-    } else {
-      return null;
-    }
-  }
-
   constructor(
     private navHelper: NavHelperService,
   ) { }

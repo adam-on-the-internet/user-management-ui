@@ -1,9 +1,9 @@
 <p>
   <span (click)="goToDashboard()" id="app-title">User Management</span> //
   <ng-container *ngIf="isLoggedIn">
-    <span (click)="logout()">logout</span> //
-    <span (click)="goToProfile()">Hello, {{ userEmail }}</span> //
-    <span (click)="goToAdmin()" *ngIf="isAdmin">(ADMIN) //</span>
+    <span (click)="goToProfile()">your profile</span> //
+    <span (click)="goToAdmin()" *ngIf="isAdmin">admin //</span>
+    <span (click)="logout()"> logout</span> //
   </ng-container>
   <ng-container *ngIf="!isLoggedIn">
     <span (click)="goToRegister()">register</span> //
