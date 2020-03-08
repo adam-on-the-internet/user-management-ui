@@ -1,13 +1,32 @@
-<p>
-  <span (click)="goToDashboard()" id="app-title">User Management</span> //
-  <ng-container *ngIf="isLoggedIn">
-    <span (click)="goToProfile()">your profile</span> //
-    <span (click)="goToAdmin()" *ngIf="isAdmin">admin //</span>
-    <span (click)="logout()"> logout</span> //
-  </ng-container>
-  <ng-container *ngIf="!isLoggedIn">
-    <span (click)="goToRegister()">register</span> //
-    <span (click)="goToLogin()">login</span> //
-  </ng-container>
-</p>
-<hr />
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a (click)="goToDashboard()" class="navbar-brand" id="app-title">
+    <i class="fa fa-users"></i>
+    User Management
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <ng-container *ngIf="isLoggedIn">
+        <a class="nav-item nav-link" (click)="goToProfile()">Your Profile</a>
+        <a class="nav-item nav-link" (click)="goToAdmin()" *ngIf="isAdmin"
+          >Admin</a
+        >
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      </ng-container>
+      <ng-container *ngIf="!isLoggedIn">
+        <a class="nav-item nav-link" (click)="goToRegister()">Register</a>
+        <a class="nav-item nav-link" (click)="goToLogin()">Login</a>
+      </ng-container>
+    </div>
+  </div>
+</nav>
