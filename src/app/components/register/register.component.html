@@ -1,25 +1,36 @@
-<div class="header">
-  <h1>
-    Register
-  </h1>
-</div>
-<div class="content">
-  <form>
-    <section id="email">
-      Email:
-      <br />
-      <input type="text" name="email" [(ngModel)]="email" /><br /><br />
-    </section>
-    <div class="error-report" *ngIf="showErrors && !valid">
-      <p>Please correct the following errors:</p>
-      <ul>
-        <li *ngFor="let error of errors">
-          {{ error }}
-        </li>
-      </ul>
+<div class="jumbotron jumbotron-fluid py-4 mb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>
+          Register
+        </h1>
+      </div>
     </div>
-    <button (click)="submit()">
-      Register
-    </button>
-  </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-3">
+      <form>
+        <section id="email">
+          Email:
+          <br />
+          <input type="text" name="email" [(ngModel)]="email" /><br /><br />
+        </section>
+        <div class="error-report" *ngIf="showErrors && !valid">
+          <p>Please correct the following errors:</p>
+          <ul>
+            <li *ngFor="let error of errors">
+              {{ error }}
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-primary" (click)="submit()">
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
