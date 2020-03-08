@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "src/app/services/user.service";
 import { BooleanHelper } from "src/app/utilities/boolean.util";
 import { User } from "src/app/models/User.model";
+import { ServiceUrl } from 'src/app/constants/rest.constants';
 
 @Component({
   selector: "app-admin",
@@ -10,6 +11,8 @@ import { User } from "src/app/models/User.model";
 })
 export class AdminComponent implements OnInit {
   public users: User[] = null;
+
+  public basicExpressServiceUrl = ServiceUrl.BasicExpress;
 
   public get ready(): boolean {
     return BooleanHelper.hasValue(this.users);
