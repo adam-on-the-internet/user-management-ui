@@ -3,7 +3,9 @@
     Status of {{ serviceName }}:
     <ng-container *ngIf="ready; else loading">
       {{ status.status }}
-      <button (click)="checkActuator()">REFRESH</button>
+      <button class="btn btn-secondary" (click)="checkActuator()">
+        REFRESH
+      </button>
     </ng-container>
   </p>
 </ng-container>
