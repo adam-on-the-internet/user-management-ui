@@ -13,9 +13,6 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 my-3">
-      <p *ngIf="loginFailure">
-        Failed to login. Check your email and password.
-      </p>
       <form>
         <section id="email">
           Email:
@@ -31,7 +28,12 @@
             [(ngModel)]="password"
           /><br /><br />
         </section>
-        <div class="error-report" *ngIf="showErrors && !valid">
+        <div class="alert alert-danger" *ngIf="loginFailure">
+          <p>
+            Failed to login. Check your email and password.
+          </p>
+        </div>
+        <div class="alert alert-warning" *ngIf="showErrors && !valid">
           <p>Please correct the following errors:</p>
           <ul>
             <li *ngFor="let error of errors">
