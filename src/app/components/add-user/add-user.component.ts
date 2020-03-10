@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import { UserService } from 'src/app/services/user.service';
-import { NavHelperService } from 'src/app/services/nav-helper.service';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
+import { UserService } from "src/app/services/user.service";
+import { NavHelperService } from "src/app/services/nav-helper.service";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
 
 @Component({
   selector: "app-add-user",

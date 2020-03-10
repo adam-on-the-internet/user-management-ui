@@ -16,10 +16,11 @@
       <ng-container *ngIf="ready; else loading">
         <p>
           <button class="btn btn-secondary" (click)="addUser()">
+            <i class="fa fa-plus"></i>
             Add User
           </button>
         </p>
-        <table>
+        <table class="table">
           <thead>
             <tr>
               <th>Email</th>
@@ -27,6 +28,7 @@
               <th>Toggle Admin</th>
               <th>Special Access</th>
               <th>Edit Access</th>
+              <th>Edit</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -51,6 +53,11 @@
                   (click)="setSpecialAccess(user)"
                 >
                   Edit access
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-secondary" (click)="editUser(user)">
+                  Edit
                 </button>
               </td>
               <td>

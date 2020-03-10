@@ -59,6 +59,10 @@ export class AdminComponent implements OnInit {
     }
   }
 
+  public editUser(user: User) {
+    this.navHelper.goToEditUser(user._id);
+  }
+
   private editAccess(user: User, newAccess: string) {
     let response;
     this.userService.editAccess(user.email, newAccess)

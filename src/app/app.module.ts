@@ -16,6 +16,7 @@ import { ProfileComponent } from "./components/profile/profile.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { ForgotComponent } from "./components/forgot/forgot.component";
 import { AddUserComponent } from "./components/add-user/add-user.component";
+import { EditUserComponent } from "./components/edit-user/edit-user.component";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddUserComponent } from "./components/add-user/add-user.component";
     ProfileComponent,
     AdminComponent,
     ForgotComponent,
-    AddUserComponent
+    AddUserComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

@@ -43,6 +43,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.AddUser);
   }
 
+  public goToEditUser(id: string): void {
+    this.goToRoutes([ROUTES_ENUM.EditUser, id]);
+  }
+
   private goToRoute(route: string): void {
     this.goToRoutes([route]);
   }

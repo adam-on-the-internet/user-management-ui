@@ -7,4 +7,5 @@ export const enum ROUTES_ENUM {
   Register = "register",
   Forgot = "forgot",
   AddUser = "add-user",
+  EditUser = "edit-user",
 }
