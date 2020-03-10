@@ -8,6 +8,7 @@ import { RegisterComponent } from "./components/register/register.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { ForgotComponent } from "./components/forgot/forgot.component";
+import { AddUserComponent } from "./components/add-user/add-user.component";
 
 const routes: Routes = [
   // main
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: ROUTES_ENUM.Forgot, component: ForgotComponent },
   { path: ROUTES_ENUM.Profile, component: ProfileComponent },
   { path: ROUTES_ENUM.Admin, component: AdminComponent },
+  { path: ROUTES_ENUM.AddUser, component: AddUserComponent },
   // default
   { path: "**", redirectTo: "dashboard" },
 ];

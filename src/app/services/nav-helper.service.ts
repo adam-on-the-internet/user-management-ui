@@ -39,6 +39,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Forgot);
   }
 
+  public goToAddUser(): void {
+    this.goToRoute(ROUTES_ENUM.AddUser);
+  }
+
   private goToRoute(route: string): void {
     this.goToRoutes([route]);
   }

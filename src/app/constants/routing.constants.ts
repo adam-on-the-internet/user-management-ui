@@ -6,4 +6,5 @@ export const enum ROUTES_ENUM {
   Login = "login",
   Register = "register",
   Forgot = "forgot",
+  AddUser = "add-user",
 }

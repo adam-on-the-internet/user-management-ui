@@ -15,6 +15,7 @@ import { RegisterComponent } from "./components/register/register.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { ForgotComponent } from "./components/forgot/forgot.component";
+import { AddUserComponent } from "./components/add-user/add-user.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ForgotComponent } from "./components/forgot/forgot.component";
     RegisterComponent,
     ProfileComponent,
     AdminComponent,
-    ForgotComponent
+    ForgotComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
