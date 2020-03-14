@@ -12,64 +12,17 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 my-3">
+    <div class="col-md-8 my-3 mx-auto">
       <p>
-        <button class="btn btn-secondary" (click)="goUserOverview()">
+        <button class="btn btn-secondary btn-block" (click)="goUserOverview()">
           User overview
         </button>
       </p>
       <p>
-        <button class="btn btn-secondary" (click)="goServiceCheck()">
+        <button class="btn btn-secondary btn-block" (click)="goServiceCheck()">
           Check services
         </button>
       </p>
-      <ng-container *ngIf="ready; else loading">
-        <p>
-          <button class="btn btn-secondary" (click)="addUser()">
-            <i class="fa fa-plus"></i>
-            Add User
-          </button>
-        </p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Email</th>
-              <th>Admin</th>
-              <th>Special Access</th>
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let user of users">
-              <td>{{ user.email }}</td>
-              <td>{{ user.admin }}</td>
-              <td>{{ user.specialAccess }}</td>
-              <td>
-                <button class="btn btn-secondary" (click)="editUser(user)">
-                  <i class="fa fa-pencil"></i>
-                  Edit
-                </button>
-              </td>
-              <td>
-                <button class="btn btn-secondary" (click)="deleteUser(user)">
-                  <i class="fa fa-trash"></i>
-                  Delete
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </ng-container>
-      <hr />
-      <app-actuator-report
-        [serviceUrl]="basicExpressServiceUrl"
-        [serviceName]="'Basic Express Service'"
-      ></app-actuator-report>
     </div>
   </div>
 </div>
-
-<ng-template #loading>
-  <p>Loading...</p>
-</ng-template>

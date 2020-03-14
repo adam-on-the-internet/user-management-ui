@@ -1,1 +1,60 @@
-<p>user-overview works!</p>
+<div class="jumbotron jumbotron-fluid py-4 mb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>
+          User Overview
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-3">
+      <ng-container *ngIf="ready; else loading">
+        <p>
+          <button class="btn btn-secondary" (click)="addUser()">
+            <i class="fa fa-plus"></i>
+            Add User
+          </button>
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Admin</th>
+              <th>Special Access</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.email }}</td>
+              <td>{{ user.admin }}</td>
+              <td>{{ user.specialAccess }}</td>
+              <td>
+                <button class="btn btn-secondary" (click)="editUser(user)">
+                  <i class="fa fa-pencil"></i>
+                  Edit
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-secondary" (click)="deleteUser(user)">
+                  <i class="fa fa-trash"></i>
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

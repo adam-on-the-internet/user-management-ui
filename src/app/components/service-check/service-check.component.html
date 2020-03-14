@@ -1,1 +1,26 @@
-<p>service-check works!</p>
+<div class="jumbotron jumbotron-fluid py-4 mb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>
+          Service Check
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 my-3 mx-auto">
+      <app-actuator-report
+        [serviceUrl]="basicExpressServiceUrl"
+        [serviceName]="'Basic Express Service'"
+      ></app-actuator-report>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
