@@ -15,7 +15,7 @@ const forceSSL = function () {
   }
 }
 
-app.use(forceSSL);
+app.use(forceSSL());
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/user-management-ui'));
