@@ -16,10 +16,11 @@
       <div *ngIf="ready; else loading">
         <p>
           <strong>
-            User:
+            Email:
           </strong>
           {{ user.email }}
         </p>
+        <hr />
         <p>
           <strong>
             Admin:
@@ -31,11 +32,21 @@
             Toggle admin
           </button>
         </p>
+        <hr />
         <p>
           <strong>
             Special Access:
           </strong>
-          {{ user.specialAccess }}
+          <input
+            type="text"
+            name="specialAccess"
+            [(ngModel)]="user.specialAccess"
+          />
+        </p>
+        <p>
+          <button class="btn btn-secondary" (click)="setSpecialAccess()">
+            Update special access
+          </button>
         </p>
       </div>
     </div>

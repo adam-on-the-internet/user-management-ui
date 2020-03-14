@@ -38,17 +38,7 @@ export class EditUserComponent implements OnInit {
     }
   }
 
-  private loadUser(): void {
-    this.user = null;
-    const userId = this.route.snapshot.paramMap.get("id");
-    this.userService.getUser(userId)
-      .subscribe((res) => this.user = res,
-        (error) => {
-          console.log("get user failed");
-        });
-  }
-
-  private editAccess() {
+  public setSpecialAccess() {
     let response;
     this.userService.editAccess(this.user.email, this.user.specialAccess)
       .subscribe((res) => response = res,
@@ -57,6 +47,16 @@ export class EditUserComponent implements OnInit {
           console.log("edit access failed");
         }, () => {
           this.loadUser();
+        });
+  }
+
+  private loadUser(): void {
+    this.user = null;
+    const userId = this.route.snapshot.paramMap.get("id");
+    this.userService.getUser(userId)
+      .subscribe((res) => this.user = res,
+        (error) => {
+          console.log("get user failed");
         });
   }
 
