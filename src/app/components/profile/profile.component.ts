@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { CookieHelper } from "src/app/utilities/cookie.util";
-import { UserService } from "src/app/services/user.service";
-import { NavHelperService } from 'src/app/services/nav-helper.service';
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
   selector: "app-profile",
@@ -27,47 +26,15 @@ export class ProfileComponent {
   }
 
   constructor(
-    private userService: UserService,
     private navHelperService: NavHelperService,
   ) { }
 
   public editEmail() {
     this.navHelperService.goToProfileEditEmail();
-    // const newEmail = prompt("What new email do you want? You will have to logout and login to see the change.");
-    // if (newEmail) {
-    //   this.performEdit(newEmail);
-    // }
   }
 
   public editPassword() {
     this.navHelperService.goToProfileEditPassword();
-    // const password = prompt("What new password do you want?");
-    // const confirmPassword = prompt("Confirm your new password.");
-    // if (password && password === confirmPassword) {
-    //   this.performPasswordUpdate(password, confirmPassword);
-    // }
-  }
-
-  private performEdit(emailToReset: string) {
-    let response;
-    this.userService.updateEmailSelf(emailToReset)
-      .subscribe((res) => response = res,
-        (error) => {
-          console.log("edit failed");
-        }, () => {
-          console.log("edit success");
-        });
-  }
-
-  private performPasswordUpdate(password: string, confirmPassword: string) {
-    let response;
-    this.userService.resetPasswordManual(password, confirmPassword)
-      .subscribe((res) => response = res,
-        (error) => {
-          console.log("edit failed");
-        }, () => {
-          console.log("edit success");
-        });
   }
 
 }

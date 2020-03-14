@@ -1,16 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ProfileEditEmailComponent } from './profile-edit-email.component';
+import { ProfileEditEmailComponent } from "./profile-edit-email.component";
+import { RouterTestingModule } from "@angular/router/testing";
+import { FormsModule } from "@angular/forms";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
-describe('ProfileEditEmailComponent', () => {
+describe("ProfileEditEmailComponent", () => {
   let component: ProfileEditEmailComponent;
   let fixture: ComponentFixture<ProfileEditEmailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileEditEmailComponent ]
+      declarations: [ProfileEditEmailComponent],
+      imports: [RouterTestingModule, FormsModule, HttpClientTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +23,7 @@ describe('ProfileEditEmailComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

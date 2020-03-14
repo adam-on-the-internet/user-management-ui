@@ -10,8 +10,8 @@ import { AdminComponent } from "./components/admin/admin.component";
 import { ForgotComponent } from "./components/forgot/forgot.component";
 import { AddUserComponent } from "./components/add-user/add-user.component";
 import { EditUserComponent } from "./components/edit-user/edit-user.component";
-import { ProfileEditEmailComponent } from './components/profile-edit-email/profile-edit-email.component';
-import { ProfileEditPasswordComponent } from './components/profile-edit-password/profile-edit-password.component';
+import { ProfileEditEmailComponent } from "./components/profile-edit-email/profile-edit-email.component";
+import { ProfileEditPasswordComponent } from "./components/profile-edit-password/profile-edit-password.component";
 
 const routes: Routes = [
   // main

@@ -1,16 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ProfileEditPasswordComponent } from './profile-edit-password.component';
+import { ProfileEditPasswordComponent } from "./profile-edit-password.component";
+import { RouterTestingModule } from "@angular/router/testing";
+import { FormsModule } from "@angular/forms";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
-describe('ProfileEditPasswordComponent', () => {
+describe("ProfileEditPasswordComponent", () => {
   let component: ProfileEditPasswordComponent;
   let fixture: ComponentFixture<ProfileEditPasswordComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileEditPasswordComponent ]
+      declarations: [ProfileEditPasswordComponent],
+      imports: [RouterTestingModule, FormsModule, HttpClientTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +23,7 @@ describe('ProfileEditPasswordComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
