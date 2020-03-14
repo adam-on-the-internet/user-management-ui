@@ -14,7 +14,29 @@
   <div class="row">
     <div class="col-md-12 my-3">
       <div *ngIf="ready; else loading">
-        <p>User: {{ user._id }}</p>
+        <p>
+          <strong>
+            User:
+          </strong>
+          {{ user.email }}
+        </p>
+        <p>
+          <strong>
+            Admin:
+          </strong>
+          {{ user.admin }}
+        </p>
+        <p>
+          <button class="btn btn-secondary" (click)="toggleAdmin()">
+            Toggle admin
+          </button>
+        </p>
+        <p>
+          <strong>
+            Special Access:
+          </strong>
+          {{ user.specialAccess }}
+        </p>
       </div>
     </div>
   </div>

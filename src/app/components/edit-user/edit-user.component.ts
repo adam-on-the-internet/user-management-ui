@@ -25,6 +25,19 @@ export class EditUserComponent implements OnInit {
     this.loadUser();
   }
 
+  public toggleAdmin() {
+    let dialogText;
+    if (this.user.admin) {
+      dialogText = `Are you sure you want to remove the admin rights for ${this.user.email}?`;
+    } else {
+      dialogText = `Are you sure you want to give admin rights to ${this.user.email}?`;
+    }
+    const confirmToggle = confirm(dialogText);
+    if (confirmToggle) {
+      this.submitToggleAdmin();
+    }
+  }
+
   private loadUser(): void {
     this.user = null;
     const userId = this.route.snapshot.paramMap.get("id");
@@ -32,6 +45,30 @@ export class EditUserComponent implements OnInit {
       .subscribe((res) => this.user = res,
         (error) => {
           console.log("get user failed");
+        });
+  }
+
+  private editAccess() {
+    let response;
+    this.userService.editAccess(this.user.email, this.user.specialAccess)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log(error);
+          console.log("edit access failed");
+        }, () => {
+          this.loadUser();
+        });
+  }
+
+  private submitToggleAdmin() {
+    let response;
+    this.userService.setAdmin(this.user.email, !this.user.admin)
+      .subscribe((res) => response = res,
+        (error) => {
+          console.log(error);
+          console.log("edit admin failed");
+        }, () => {
+          this.loadUser();
         });
   }
 
