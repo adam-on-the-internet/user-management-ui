@@ -10,26 +10,26 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="ready; else loading">
   <div class="row">
     <div class="col-md-6 my-3">
       <p>
         <strong>
           email:
         </strong>
-        {{ email }}
+        {{ user.email }}
       </p>
       <p>
         <strong>
           admin:
         </strong>
-        {{ admin }}
+        {{ user.admin }}
       </p>
       <p>
         <strong>
           special access:
         </strong>
-        {{ specialAccess }}
+        {{ user.specialAccess }}
       </p>
     </div>
     <div class="col-md-6 my-3">
@@ -46,3 +46,13 @@
     </div>
   </div>
 </div>
+
+<ng-template #loading>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>Loading...</p>
+      </div>
+    </div>
+  </div>
+</ng-template>

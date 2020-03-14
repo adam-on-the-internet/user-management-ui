@@ -48,6 +48,14 @@ export abstract class CookieHelper {
     }
   }
 
+  public static get id(): string {
+    if (CookieHelper.isLoggedOn) {
+      return CookieHelper.getUserDetails().userId;
+    } else {
+      return null;
+    }
+  }
+
   public static get email(): string {
     if (CookieHelper.isLoggedOn) {
       return CookieHelper.getUserDetails().email;

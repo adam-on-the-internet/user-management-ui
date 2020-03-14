@@ -31,6 +31,15 @@ export class UserService {
     return this.http.get(url, CookieHelper.authHeaders) as Observable<User>;
   }
 
+  public getUserSelf(): Observable<User> {
+    const url = RestUrlBuilder.buildRestUrl({
+      service: ServiceUrl.BasicExpress,
+      controller: "user",
+      collection: "self"
+    });
+    return this.http.get(url, CookieHelper.authHeaders) as Observable<User>;
+  }
+
   public register(email: string): Observable<any> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
