@@ -19,6 +19,8 @@ import { AddUserComponent } from "./components/add-user/add-user.component";
 import { EditUserComponent } from "./components/edit-user/edit-user.component";
 import { ProfileEditEmailComponent } from "./components/profile-edit-email/profile-edit-email.component";
 import { ProfileEditPasswordComponent } from "./components/profile-edit-password/profile-edit-password.component";
+import { ServiceCheckComponent } from "./components/service-check/service-check.component";
+import { UserOverviewComponent } from "./components/user-overview/user-overview.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ProfileEditPasswordComponent } from "./components/profile-edit-password
     AddUserComponent,
     EditUserComponent,
     ProfileEditEmailComponent,
-    ProfileEditPasswordComponent
+    ProfileEditPasswordComponent,
+    ServiceCheckComponent,
+    UserOverviewComponent
   ],
   imports: [
     BrowserModule,

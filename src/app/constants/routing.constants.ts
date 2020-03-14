@@ -5,6 +5,8 @@ export const enum ROUTES_ENUM {
   ProfileEditEmail = "profile-edit-email",
   ProfileEditPassword = "profile-edit-password",
   Admin = "admin",
+  ServiceCheck = "service-check",
+  UserOverview = "user-overview",
   Login = "login",
   Register = "register",
   Forgot = "forgot",

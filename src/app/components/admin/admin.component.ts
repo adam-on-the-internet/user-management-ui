@@ -32,6 +32,14 @@ export class AdminComponent implements OnInit {
     this.navHelper.goToAddUser();
   }
 
+  public goUserOverview() {
+    this.navHelper.goToUserOverview();
+  }
+
+  public goServiceCheck() {
+    this.navHelper.goToServiceCheck();
+  }
+
   public deleteUser(user: User) {
     const confirmDelete = confirm(`Are you sure you want to delete ${user.email}?`);
     if (confirmDelete) {

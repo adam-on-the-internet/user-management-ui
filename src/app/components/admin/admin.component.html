@@ -13,6 +13,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 my-3">
+      <p>
+        <button class="btn btn-secondary" (click)="goUserOverview()">
+          User overview
+        </button>
+      </p>
+      <p>
+        <button class="btn btn-secondary" (click)="goServiceCheck()">
+          Check services
+        </button>
+      </p>
       <ng-container *ngIf="ready; else loading">
         <p>
           <button class="btn btn-secondary" (click)="addUser()">
