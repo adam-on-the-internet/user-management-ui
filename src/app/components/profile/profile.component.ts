@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CookieHelper } from "src/app/utilities/cookie.util";
 import { UserService } from "src/app/services/user.service";
+import { NavHelperService } from 'src/app/services/nav-helper.service';
 
 @Component({
   selector: "app-profile",
@@ -27,21 +28,24 @@ export class ProfileComponent {
 
   constructor(
     private userService: UserService,
+    private navHelperService: NavHelperService,
   ) { }
 
   public editEmail() {
-    const newEmail = prompt("What new email do you want? You will have to logout and login to see the change.");
-    if (newEmail) {
-      this.performEdit(newEmail);
-    }
+    this.navHelperService.goToProfileEditEmail();
+    // const newEmail = prompt("What new email do you want? You will have to logout and login to see the change.");
+    // if (newEmail) {
+    //   this.performEdit(newEmail);
+    // }
   }
 
   public editPassword() {
-    const password = prompt("What new password do you want?");
-    const confirmPassword = prompt("Confirm your new password.");
-    if (password && password === confirmPassword) {
-      this.performPasswordUpdate(password, confirmPassword);
-    }
+    this.navHelperService.goToProfileEditPassword();
+    // const password = prompt("What new password do you want?");
+    // const confirmPassword = prompt("Confirm your new password.");
+    // if (password && password === confirmPassword) {
+    //   this.performPasswordUpdate(password, confirmPassword);
+    // }
   }
 
   private performEdit(emailToReset: string) {

@@ -23,6 +23,14 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Profile);
   }
 
+  public goToProfileEditEmail(): void {
+    this.goToRoute(ROUTES_ENUM.ProfileEditEmail);
+  }
+
+  public goToProfileEditPassword(): void {
+    this.goToRoute(ROUTES_ENUM.ProfileEditPassword);
+  }
+
   public goToAdmin(): void {
     this.goToRoute(ROUTES_ENUM.Admin);
   }

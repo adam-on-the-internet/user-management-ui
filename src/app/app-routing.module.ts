@@ -10,6 +10,8 @@ import { AdminComponent } from "./components/admin/admin.component";
 import { ForgotComponent } from "./components/forgot/forgot.component";
 import { AddUserComponent } from "./components/add-user/add-user.component";
 import { EditUserComponent } from "./components/edit-user/edit-user.component";
+import { ProfileEditEmailComponent } from './components/profile-edit-email/profile-edit-email.component';
+import { ProfileEditPasswordComponent } from './components/profile-edit-password/profile-edit-password.component';
 
 const routes: Routes = [
   // main
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: ROUTES_ENUM.Register, component: RegisterComponent },
   { path: ROUTES_ENUM.Forgot, component: ForgotComponent },
   { path: ROUTES_ENUM.Profile, component: ProfileComponent },
+  { path: ROUTES_ENUM.ProfileEditEmail, component: ProfileEditEmailComponent },
+  { path: ROUTES_ENUM.ProfileEditPassword, component: ProfileEditPasswordComponent },
   { path: ROUTES_ENUM.Admin, component: AdminComponent },
   { path: ROUTES_ENUM.AddUser, component: AddUserComponent },
   { path: ROUTES_ENUM.EditUser + "/:id", component: EditUserComponent },
