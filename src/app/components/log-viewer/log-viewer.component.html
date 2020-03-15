@@ -1,1 +1,40 @@
-<p>log-viewer works!</p>
+<div class="jumbotron jumbotron-fluid py-4 mb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>
+          Log Viewer
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 my-3">
+      <table class="table" *ngIf="ready; else loading">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>App</th>
+            <th>Message</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let log of logs">
+            <td>{{ log.level }}</td>
+            <td>{{ log.application }}</td>
+            <td>{{ log.message }}</td>
+            <td>{{ log.date | date:'long' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

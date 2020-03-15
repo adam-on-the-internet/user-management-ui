@@ -21,7 +21,7 @@ import { ProfileEditEmailComponent } from "./components/profile-edit-email/profi
 import { ProfileEditPasswordComponent } from "./components/profile-edit-password/profile-edit-password.component";
 import { ServiceCheckComponent } from "./components/service-check/service-check.component";
 import { UserOverviewComponent } from "./components/user-overview/user-overview.component";
-import { LogViewerComponent } from './components/log-viewer/log-viewer.component';
+import { LogViewerComponent } from "./components/log-viewer/log-viewer.component";
 
 @NgModule({
   declarations: [

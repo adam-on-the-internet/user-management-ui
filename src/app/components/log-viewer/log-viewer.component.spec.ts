@@ -1,16 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { LogViewerComponent } from './log-viewer.component';
+import { LogViewerComponent } from "./log-viewer.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
-describe('LogViewerComponent', () => {
+describe("LogViewerComponent", () => {
   let component: LogViewerComponent;
   let fixture: ComponentFixture<LogViewerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogViewerComponent ]
+      declarations: [LogViewerComponent],
+      imports: [HttpClientTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +21,7 @@ describe('LogViewerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
