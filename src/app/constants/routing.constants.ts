@@ -7,6 +7,7 @@ export const enum ROUTES_ENUM {
   Admin = "admin",
   ServiceCheck = "service-check",
   UserOverview = "user-overview",
+  Logs = "logs",
   Login = "login",
   Register = "register",
   Forgot = "forgot",

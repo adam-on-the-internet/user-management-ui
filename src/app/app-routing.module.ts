@@ -14,6 +14,7 @@ import { ProfileEditEmailComponent } from "./components/profile-edit-email/profi
 import { ProfileEditPasswordComponent } from "./components/profile-edit-password/profile-edit-password.component";
 import { ServiceCheckComponent } from "./components/service-check/service-check.component";
 import { UserOverviewComponent } from "./components/user-overview/user-overview.component";
+import { LogViewerComponent } from './components/log-viewer/log-viewer.component';
 
 const routes: Routes = [
   // main
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: ROUTES_ENUM.Admin, component: AdminComponent },
   { path: ROUTES_ENUM.ServiceCheck, component: ServiceCheckComponent },
   { path: ROUTES_ENUM.UserOverview, component: UserOverviewComponent },
+  { path: ROUTES_ENUM.Logs, component: LogViewerComponent },
   { path: ROUTES_ENUM.AddUser, component: AddUserComponent },
   { path: ROUTES_ENUM.EditUser + "/:id", component: EditUserComponent },
   // default

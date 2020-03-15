@@ -43,6 +43,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.ServiceCheck);
   }
 
+  public goToLogs(): void {
+    this.goToRoute(ROUTES_ENUM.Logs);
+  }
+
   public goToLogin(): void {
     this.goToRoute(ROUTES_ENUM.Login);
   }

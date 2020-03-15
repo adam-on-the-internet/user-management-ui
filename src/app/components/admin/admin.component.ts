@@ -19,4 +19,8 @@ export class AdminComponent {
     this.navHelper.goToServiceCheck();
   }
 
+  public goLogs() {
+    this.navHelper.goToLogs();
+  }
+
 }
