@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { CookieHelper } from 'src/app/utilities/cookie.util';
-import { NavHelperService } from 'src/app/services/nav-helper.service';
+import { CookieHelper } from "src/app/utilities/cookie.util";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
   selector: "app-dashboard",
