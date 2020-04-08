@@ -5,9 +5,6 @@
         <h1>
           User Management
         </h1>
-        <p>
-          for Adam on the Internet Applications
-        </p>
       </div>
     </div>
   </div>
@@ -15,10 +12,51 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 my-3">
+    <div class="col-md-6 mt-3">
       <p>
-        Welcome to the user management UI!
+        Welcome to the User Management UI!
       </p>
+      <p>
+        This app manages the users for the main Adam in the Parking Lot
+        websites.
+      </p>
+    </div>
+    <div class="col-md-6 my-3">
+      <ng-container *ngIf="!isLoggedOn">
+        <p class="text-center">
+          You are not logged in.
+        </p>
+        <p>
+          <button class="btn btn-primary btn-block" (click)="goToRegister()">
+            Register
+          </button>
+        </p>
+        <p>
+          <button class="btn btn-primary btn-block" (click)="goToLogin()">
+            Login
+          </button>
+        </p>
+      </ng-container>
+      <ng-container *ngIf="isLoggedOn">
+        <p class="text-center">
+          You are logged in!
+        </p>
+        <p>
+          <button class="btn btn-primary btn-block" (click)="goToProfile()">
+            Your Profile
+          </button>
+        </p>
+        <p *ngIf="admin">
+          <button class="btn btn-primary btn-block" (click)="goToAdmin()">
+            Admin
+          </button>
+        </p>
+        <p>
+          <button class="btn btn-primary btn-block" (click)="logout()">
+            Logout
+          </button>
+        </p>
+      </ng-container>
     </div>
   </div>
 </div>
