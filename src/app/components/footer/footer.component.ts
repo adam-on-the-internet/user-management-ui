@@ -1,5 +1,4 @@
-import { Component } from "@angular/core";
-import { NavHelperService } from "src/app/services/nav-helper.service";
+import {Component} from "@angular/core";
 
 @Component({
   selector: "app-footer",
@@ -11,11 +10,4 @@ export class FooterComponent {
     return new Date().getFullYear();
   }
 
-  constructor(
-    private navHelper: NavHelperService,
-  ) { }
-
-  public goToInfo() {
-    this.navHelper.goToInfo();
-  }
 }
