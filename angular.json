@@ -130,8 +130,13 @@
               "devServerTarget": "user-management-ui:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "user-management-ui"
 }
